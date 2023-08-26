@@ -246,4 +246,6 @@ footer p{
     width: 60rem;
     height: 30rem;
 }
-
+.body{
+    margin: 0;
+}
