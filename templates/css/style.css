@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Piazzolla:ital,opsz,wght@0,8..30,200;0,8..30,300;0,8..30,400;1,8..30,200;1,8..30,300&family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+}
+
+:root{
+    --main-bg:#1e272e;
+    --main-color:#0096e6;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* overflow: hidden; */
+}
+.main_menu{
+    background-color: var(--main-bg);
+}
+.navbar{
+    color: #fff;
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+}
+.navbar li{
+    margin-left: 20px;
+}
+.navbar a{
+    color: #fff;
+    font-size: 1.8rem;
+}
+.navbar a:hover{
+    color: var(--main-color);
+    font-size: 1.8rem;
+}
+.navbar-toggler{
+    background-color: #b4afaf;
+}
+
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color: var(--main-color);
+}
+
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* form styling */
+
+/* Apply some basic styling to the main container */
+.weatherfont{
+    margin-top: 10rem;
+    font-size: 2rem;
+    margin-bottom: 10rem;
+}
+/* .main_header{
+    margin-bottom: -15rem;
+} */
+.main_content {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Style the form */
+  .temp_form {
+    margin-bottom: 20px;
+  }
+  
+  /* Style the input fields */
+  #cityName {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #submitBtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style the temperature information container */
+  .tempInformation {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-top: 7rem;
+  }
+  
+  /* Style the top layer */
+  .top_layer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the date and day information */
+  #day {
+    font-weight: bold;
+  }
+  
+  #today_date {
+    font-size: 14px;
+  }
+  
+  /* Style the main layer */
+  .main_layer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style the city name */
+  #city_name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the middle layer */
+  .middle_layer {
+    margin-top: 10px;
+  }
+  
+  /* Style the temperature display */
+  #temp {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  /* Style the temperature status */
+  #temp_status {
+    font-size: 18px;
+  }
+  
+  /* Hide the temperature information initially */
+  .data_hide {
+    display: none;
+  }
+  
+  #submitBtn:hover{ 
+    background-color: var(--main-bg);
+  }
+
+/* main header */
+.main_header_left{
+    height:70rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main_header_left p{
+    font-size: 2rem;
+}
+.main_header_left h1{
+    font-size: 4rem;
+    margin:1rem 0 4rem 0;
+    text-transform: capitalize;
+}
+.main_header_left button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+    outline: none;
+}
+.main_header_left button:hover{
+    box-shadow: 0 8px 6px -6px var(--main-color);
+}
+.main_header_right{
+    height:70rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* footer code */
+
+footer{
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto
+}
+
+footer p{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 5rem;
+    font-size: 1.4rem;
+    margin-top: auto;
+}
+
+/* responsive code */
+
+@media(max-width:768px){
+    .main_header_left{
+        height: 40%;
+        margin: 5rem 0;
+    }
+    .main_header_right{
+        height: auto;
+        margin-top: 3rem;
+        display: none;
+    }
+    body{
+        overflow: auto;
+    }
+    .main_header{
+        margin-bottom: 0;
+    }
+}
+
+/* about section code */
+.fa-brands{
+    margin: 34px 9px;
+}
+
+/* error page style */
+
+.errimg{
+    width: 60rem;
+    height: 30rem;
+}
+
